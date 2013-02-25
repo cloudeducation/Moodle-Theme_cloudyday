@@ -39,9 +39,9 @@ if ($COURSE->id != SITEID){
 	        		$currentsectionpage = ($topicnode->contains_active_node())? 'selected' : '';
 	        		if ($topicnode->action == null && $PAGE->url == ($wwwroot.'/course/view.php?id='.$COURSE->id)){$currentsectionpage = 'selected';}
 	        		if ($topicnode->action == null){
-	        			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="section" href="'.$wwwroot.'/course/view.php?id='.$COURSE->id.'">'.$topicnode->title.'</a></li>';
+	        			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="section" href="'.$wwwroot.'/course/view.php?id='.$COURSE->id.'">'.$topicnode->text.'</a></li>';
 	        		} else {
-	        			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="section" href="'.$topicnode->action.'">'.$topicnode->title.'</a></li>';
+	        			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="section" href="'.$topicnode->action.'">'.$topicnode->text.'</a></li>';
 	        		}
 	        	}
 	       	}			
