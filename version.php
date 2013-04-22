@@ -11,8 +11,8 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2013021001; // The current module version (Date: YYYYMMDDXX)
+$plugin->version   = 2013042201; // The current module version (Date: YYYYMMDDXX)
 $plugin->requires  = 2012112900; // Requires this Moodle version
 $plugin->component = 'theme_cloudyday'; // Full name of the plugin (used for diagnostics)
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = "1.0";
+$plugin->release   = "1.1";
