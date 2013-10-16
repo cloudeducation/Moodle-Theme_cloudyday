@@ -37,9 +37,9 @@ if ($COURSE->id != SITEID){
 	    	foreach ($coursenode->children as $topicnode) {
 	        	if ($topicnode->type == 30){
 	        		$currentsectionpage = ($topicnode->contains_active_node())? 'selected' : '';
-	        		if ($topicnode->action == null && $PAGE->url == ($wwwroot.'/course/view.php?id='.$COURSE->id)){$currentsectionpage = 'selected';}
+	        		if ($topicnode->action == null && $PAGE->url == ($CFG->wwwroot.'/course/view.php?id='.$COURSE->id)){$currentsectionpage = 'selected';}
 	        		if ($topicnode->action == null){
-	        			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="section" href="'.$wwwroot.'/course/view.php?id='.$COURSE->id.'">'.$topicnode->text.'</a></li>';
+	        			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="section" href="'.$CFG->wwwroot.'/course/view.php?id='.$COURSE->id.'">'.$topicnode->text.'</a></li>';
 	        		} else {
 	        			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="section" href="'.$topicnode->action.'">'.$topicnode->text.'</a></li>';
 	        		}
@@ -47,8 +47,8 @@ if ($COURSE->id != SITEID){
 	       	}			
 		} else {
 			$currentsectionpage ='';
-			if ($PAGE->url == ($wwwroot.'/course/view.php?id='.$COURSE->id)){$currentsectionpage = 'selected';}
-			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="welcome" href="'.$wwwroot.'/course/view.php?id='.$COURSE->id.'">'.get_string('coursehome', 'theme_cloudyday').'</a></li>';
+			if ($PAGE->url == ($CFG->wwwroot.'/course/view.php?id='.$COURSE->id)){$currentsectionpage = 'selected';}
+			$newnavmenu .= '<li class="'.$currentsectionpage.'"><a class="welcome" href="'.$CFG->wwwroot.'/course/view.php?id='.$COURSE->id.'">'.get_string('coursehome', 'theme_cloudyday').'</a></li>';
 		}
 
     }
